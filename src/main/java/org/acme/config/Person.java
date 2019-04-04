@@ -13,16 +13,6 @@ public class Person extends PanacheEntity {
     public String name;
     public LocalDate birth;
 
-//    Person() {
-//        super();
-//    }
-//
-//    Person(String name, LocalDate birth) {
-//        super();
-//        this.name = name;
-//        this.birth = birth;
-//    }
-
     @JsonbTransient
     public long getId() {
         return this.id;

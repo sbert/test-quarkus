@@ -8,15 +8,14 @@ import javax.ws.rs.core.MediaType;
 import java.time.LocalDate;
 import java.util.List;
 
-@Path("/persons")
+@Path("/api/person")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class PersonResource {
 
     @GET
     public List<Person> list() {
-        List<Person> persons = Person.findAll().list();
-        return persons;
+        return Person.findAll().list();
     }
 
     @Path("/init")
